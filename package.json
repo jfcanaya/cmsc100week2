@@ -6,23 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-<<<<<<< HEAD
-  "author": "Laubrey Ual",
-=======
   "author": "Canaya, JFC",
->>>>>>> 8d37af9d8a4c3ad273d3ff713f1e1160bac300a8
   "license": "BSD-2-Clause",
   "dependencies": {
     "express": "~4.13.3",
     "body-parser": "~1.13.3",
     "method-override": "~2.3.5",
-<<<<<<< HEAD
     "mysql": "~2.9.0",
     "should": "~7.1.0",
     "should-http": "0.0.4",
     "supertest": "~1.1.0"
-=======
-    "mysql": "~2.9.0"
->>>>>>> 8d37af9d8a4c3ad273d3ff713f1e1160bac300a8
   }
 }

@@ -12,5 +12,4 @@ exports.place = function(req, res){
 
 exports.remove = function(req, res){
 	res.send('Delete a teacher');
-
 };

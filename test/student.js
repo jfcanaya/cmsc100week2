@@ -10,7 +10,7 @@ describe('student', function(){
 				.end(function(err, res){
 					if(err) throw err;
 					res.should.have.status(200);
-					res.body.should.be.an.instanceOf(Array).and.have.lengthOf(11);
+					res.body.should.be.an.instanceOf(Array);
 					done();
 				});
 		});
@@ -21,14 +21,20 @@ describe('student', function(){
 			request(url)
 				.post('/students')
 				.send({
-					'studNo': '2015-12345',
-					'name': 'Marie',
-					'bdate': '1997-11-12'
+					'studNo': '2000-00000',
+					'name': 'HUHUHU',
+					'bdate': '1111-11-11'
 					})
 				.end(function(err, res){
 					if(err) throw err;
 					res.should.have.status(200);
 					res.body.should.be.an.instanceOf(Object);
+					res.should('studNo'== '2000-00000');
+					res.should.have.properties({
+						studNo: '2000-0000',
+						name: 'HUHUHU',
+						bdate: '1111-11-11'
+					});
 					done();
 				});
 		});
