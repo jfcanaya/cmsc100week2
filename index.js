@@ -22,19 +22,8 @@ app.route('/students')
         res.send('Update a student'); });
 */
 
-/*app.get('/', function(req,res){
-	res.send('Hello World!');
-});*/
-
-/*app.route('/students')
-	.get(function(req,res){
-		res.send('Get a student'); })
-	.post(function(req,res){
-		res.send('Add a student'); })
-	.put(function(req, res){
-		res.send('Update a student'); });
-*/
-
 app.use(require('body-parser')()); //module
 app.use(require('method-override')()); //module
 app.use(require(__dirname + '/config/router')(express.Router()));
+
+app.use(express.static(__dirname + '/public'));
